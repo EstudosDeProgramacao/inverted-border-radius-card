@@ -3,7 +3,7 @@
 Este projeto é um componente de card estilizado com bordas invertidas, transições de cores dinâmicas e um botão interativo com efeitos de **hover**. Ele foi desenvolvido como um exercício criativo para explorar animações em **CSS** e técnicas modernas de design para interfaces visuais.  
 
 ## 🎨 Demonstração  
-![Preview](card-preview.gif)
+![Preview](card-preview.png.gif)
 
 ## 🛠️ Tecnologias Utilizadas  
 - **HTML5**  
