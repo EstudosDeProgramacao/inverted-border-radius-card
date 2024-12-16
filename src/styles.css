@@ -1,0 +1,160 @@
+* {
+	border: 0;
+	padding: 0;
+	box-sizing: 0;
+}
+
+:root {
+	--bg-color: #181e1e;
+	--border-color: rgba(62, 72, 75);
+	font-size: 16px;
+}
+
+body {
+	background-color: var(--bg-color);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+	flex-wrap: wrap;
+	padding: 1.25rem;
+	justify-content: center;
+	align-items: center;
+	gap: 0.625rem;
+}
+
+.card {
+	position: relative;
+}
+
+.cardImg {
+	width: 25rem;
+	height: 25rem;
+	border-radius: 1.25rem;
+	border: 0.5rem solid var(--border-color);
+	overflow: hidden;
+	position: relative;
+
+	animation: modify-border-color 3s ease-in-out infinite alternate;
+}
+
+.cardImg img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.tag {
+	width: 12.5rem;
+	height: 3.75rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: var(--bg-color);
+	border-top: 0.5rem solid var(--border-color);
+	border-left: 0.5rem solid var(--border-color);
+	border-radius: 1.25rem 0 0 0;
+	padding: 0.3125rem;
+	animation: modify-border-color 3s ease-in-out infinite alternate;
+}
+
+.tag::after {
+	width: 1.125rem;
+	height: 1.125rem;
+	content: '';
+	position: absolute;
+	background-color: transparent;
+	top: -1.125rem;
+	right: 0;
+	border-bottom-right-radius: 0.625rem;
+	box-shadow: 0.375rem 0.375rem var(--bg-color);
+}
+
+.tag::before {
+	width: 1.125rem;
+	height: 1.125rem;
+	content: '';
+	position: absolute;
+	background-color: transparent;
+	top: -1.6rem;
+	right: 0.5rem;
+	border-bottom-right-radius: 0.4rem;
+	box-shadow: 0.5rem 0.45rem white;
+}
+
+.curve_one,
+.curve_two {
+	width: 1.25rem;
+	height: 1.25rem;
+	content: '';
+	position: absolute;
+}
+
+.curve_one {
+	background-color: transparent;
+	left: 42.8%;
+	bottom: 0.48rem;
+	border-bottom-right-radius: 0.4rem;
+	box-shadow: 0.5rem 0.45rem white;
+}
+
+.curve_two {
+	left: 44.7%;
+	bottom: 0;
+	border-bottom-right-radius: 0.5rem;
+	box-shadow: 0.4rem 0.4rem var(--bg-color);
+}
+
+.tag > p {
+	cursor: pointer;
+	background: linear-gradient(120deg, darkmagenta, crimson 55%, white 55%, white 60%, crimson 60% 62%, white 62%);
+	background-size: 200% 100%;
+	background-position: 100% 0;
+	transition: background-position 0.5s;
+	color: crimson;
+	font-size: 0.875rem;
+	font-weight: 700;
+	padding: 0.5rem 0.625rem;
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.3125rem;
+	border-radius: 0.3125rem;
+	transition: all 0.3s ease-in-out, transform 0.24s ease-in-out;
+}
+
+.tag > p:hover {
+	background-position: 0 0;
+	color: white;
+	transform: scale(1.02);
+}
+
+@keyframes modify-border-color {
+	from {
+		border-color: var(--border-color);
+	}
+	50% {
+		border-color: crimson;
+	}
+	to {
+		border-color: darkmagenta;
+	}
+}
+
+@keyframes modify-box-color {
+	from {
+		box-shadow: 0.375rem 0.375rem var(--border-color);
+	}
+	50% {
+		box-shadow: 0.375rem 0.375rem crimson;
+	}
+	to {
+		box-shadow: 0.375rem 0.375rem darkmagenta;
+	}
+}
