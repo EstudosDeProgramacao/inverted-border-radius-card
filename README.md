@@ -8,7 +8,7 @@ Este projeto é um componente de card estilizado com bordas invertidas, transiç
 ## 🛠️ Tecnologias Utilizadas  
 - **HTML5**  
 - **CSS3**  
-- **Flexbox** e **Grid** para layout  
+- **Flexbox** para layout  
 - Animações com **keyframes** e **transitions**  
 
 ## 🚀 Funcionalidades  
